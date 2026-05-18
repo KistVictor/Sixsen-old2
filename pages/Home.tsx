@@ -17,7 +17,7 @@ import {
 import { ValueProp, ServiceItem } from '../types';
 
 const Home: React.FC = () => {
-  const schedulingLink = "https://calendar.app.google/vrzVZ7DRChNfGHHM8";
+  const schedulingLink = "https://api.whatsapp.com/send/?phone=555199516231&text=Ol%C3%A1%21+Vim+do+site+e+gostaria+de+falar+de+um+projeto.";
   const whatsappLink = "https://api.whatsapp.com/send/?phone=5551999516231&text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+os+servi%C3%A7os+da+Sixsen.";
 
   const valueProps: ValueProp[] = [

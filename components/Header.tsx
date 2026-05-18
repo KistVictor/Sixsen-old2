@@ -20,7 +20,7 @@ const Header: React.FC = () => {
     { name: 'Sobre e Portfólio', path: '/sobre' },
   ];
 
-  const schedulingLink = "https://calendar.app.google/vrzVZ7DRChNfGHHM8";
+  const schedulingLink = "https://api.whatsapp.com/send/?phone=555199516231&text=Ol%C3%A1%21+Vim+do+site+e+gostaria+de+falar+de+um+projeto.";
 
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-sixsen-dark/90 backdrop-blur-md py-4 border-b border-sixsen-orange/10' : 'bg-transparent py-6'}`}>
