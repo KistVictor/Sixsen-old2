@@ -19,8 +19,7 @@ import {
 import '../styles/lp-aios.css';
 
 const WHATSAPP_LINK =
-  'https://api.whatsapp.com/send/?phone=5551999516231&text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+o%20AIOS.';
-const LINKEDIN_LINK = 'https://www.linkedin.com/in/kistvictor/';
+  'https://api.whatsapp.com/send/?phone=5551999516231&text=Ol%C3%A1%21+Gostaria+de+saber+mais+sobre+o+AIOS.&type=phone_number&app_absent=0';
 
 /** Sixsen six-dot mark. */
 function Mark({ className }: { className?: string }) {
@@ -359,7 +358,12 @@ const LpAios: React.FC = () => {
               <span>fundador da Sixsen</span>
             </span>
           </a>
-          <a className="btn header-cta" href="#agendar">
+          <a
+            className="btn header-cta"
+            href={WHATSAPP_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Agendar minha sessão
           </a>
         </div>
@@ -390,7 +394,12 @@ const LpAios: React.FC = () => {
                 de depender só de você.
               </p>
               <div className="hero-actions" data-reveal data-delay="3">
-                <a className="btn btn--lg" href="#agendar">
+                <a
+                  className="btn btn--lg"
+                  href={WHATSAPP_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <span>Agendar minha sessão</span>
                   <span className="ar" aria-hidden="true">
                     →
@@ -642,7 +651,9 @@ const LpAios: React.FC = () => {
                 </p>
                 <a
                   className="textlink"
-                  href="#agendar"
+                  href={WHATSAPP_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   style={{ marginTop: 12, alignSelf: 'flex-start' }}
                 >
                   Agendar minha sessão →
@@ -875,11 +886,11 @@ const LpAios: React.FC = () => {
                 Tem uma dúvida antes?{' '}
                 <a
                   className="textlink"
-                  href={LINKEDIN_LINK}
+                  href={WHATSAPP_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Me chama no LinkedIn.
+                  Me chama no WhatsApp.
                 </a>
               </span>
             </div>
@@ -898,9 +909,8 @@ const LpAios: React.FC = () => {
             </div>
           </div>
           <nav className="footer-links" aria-label="rodapé">
-            <a href="#agendar">Agendar</a>
-            <a href={LINKEDIN_LINK} target="_blank" rel="noopener noreferrer">
-              LinkedIn
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+              Agendar
             </a>
             <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
               WhatsApp
@@ -915,7 +925,12 @@ const LpAios: React.FC = () => {
 
       {/* ============================ STICKY MOBILE CTA ============================ */}
       <div className="mobile-cta" id="mobileCta">
-        <a className="btn btn--block" href="#agendar">
+        <a
+          className="btn btn--block"
+          href={WHATSAPP_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <span>Agendar minha sessão</span>{' '}
           <span className="ar" aria-hidden="true">
             →
