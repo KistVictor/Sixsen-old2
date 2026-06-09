@@ -256,7 +256,7 @@ body.lp-aios-active { background: var(--paper); }
 .lp-aios .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
 .lp-aios .brand .mark { width: 26px; height: auto; color: var(--accent); display: block; }
 .lp-aios .brand .name { display: flex; flex-direction: column; line-height: 1; }
-.lp-aios .brand .name b { font-family: var(--display); font-size: 16px; font-weight: 400; letter-spacing: 0.01em; text-transform: lowercase; }
+.lp-aios .brand .name b { font-family: var(--display); font-size: 16px; font-weight: 400; letter-spacing: 0.01em; }
 .lp-aios .brand .name span { font-size: 11px; color: var(--sx-neutro-500); letter-spacing: 0.04em; margin-top: 4px; }
 .lp-aios .header-cta { display: inline-flex; }
 @media (max-width: 720px) { .lp-aios .header-cta { display: none; } }
@@ -518,7 +518,7 @@ body.lp-aios-active { background: var(--paper); }
 .lp-aios .footer-inner { display: flex; flex-wrap: wrap; gap: 28px; justify-content: space-between; align-items: center; }
 .lp-aios .footer-brand { display: inline-flex; align-items: center; gap: 13px; }
 .lp-aios .footer-brand .mark { width: 30px; color: var(--accent); }
-.lp-aios .footer-brand b { font-family: var(--display); color: var(--sx-branco); font-size: 18px; text-transform: lowercase; font-weight: 400; }
+.lp-aios .footer-brand b { font-family: var(--display); color: var(--sx-branco); font-size: 18px; font-weight: 400; }
 .lp-aios .footer-brand span { display: block; font-size: 12px; margin-top: 3px; }
 .lp-aios .footer-links { display: flex; gap: 24px; font-size: 14px; }
 .lp-aios .footer-links a { text-decoration: none; color: color-mix(in oklab, var(--sx-branco) 70%, transparent); transition: color var(--sx-dur-normal) var(--sx-ease); }

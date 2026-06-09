@@ -354,7 +354,7 @@ const LpAios: React.FC = () => {
           <a className="brand" href="#topo" aria-label="Victor Kist, início">
             <Mark className="mark" />
             <span className="name">
-              <b>victor kist</b>
+              <b>Victor Kist</b>
               <span>fundador da Sixsen</span>
             </span>
           </a>
@@ -904,7 +904,7 @@ const LpAios: React.FC = () => {
           <div className="footer-brand">
             <Mark className="mark" />
             <div>
-              <b>victor kist</b>
+              <b>Victor Kist</b>
               <span>fundador da Sixsen · inteligência aplicada</span>
             </div>
           </div>
