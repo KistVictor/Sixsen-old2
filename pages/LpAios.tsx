@@ -14,7 +14,7 @@ import {
   FlaskConical,
   Cpu,
   CodeXml,
-  Info,
+  Check,
 } from 'lucide-react';
 import '../styles/lp-aios.css';
 
@@ -385,13 +385,13 @@ const LpAios: React.FC = () => {
                 data-delay="1"
                 style={{ textTransform: 'none' }}
               >
-                Monte o sistema de IA da sua empresa em uma{' '}
-                <span className="accent-word">sessão</span>.
+                Sua empresa rodando com IA,{' '}
+                <span className="accent-word">sem depender só de você</span>.
               </h1>
               <p className="lead" data-reveal data-delay="2">
-                Uma consultoria individual e ao vivo para você sair com o seu
-                próprio AI operating system funcionando, e o seu negócio deixar
-                de depender só de você.
+                Em uma consultoria individual e ao vivo, montamos juntos o seu
+                AI operating system. Você sai da sessão com ele funcionando e
+                pronto para delegar à IA o que hoje consome as suas horas.
               </p>
               <div className="hero-actions" data-reveal data-delay="3">
                 <a
@@ -406,7 +406,7 @@ const LpAios: React.FC = () => {
                   </span>
                 </a>
                 <span className="hero-assure">
-                  <ShieldCheck /> Vagas limitadas nesta primeira leva
+                  <ShieldCheck /> Primeira leva: 10 vagas pela metade do preço
                 </span>
               </div>
             </div>
@@ -498,6 +498,50 @@ const LpAios: React.FC = () => {
                 solta não conhece a sua empresa.
               </p>
             </div>
+          </div>
+        </section>
+
+        {/* ============================ BIG NUMBERS ============================ */}
+        <section className="section section--tight" aria-labelledby="num-title">
+          <div className="wrap">
+            <div className="sec-head">
+              <span className="kicker" data-reveal>
+                por que agora
+              </span>
+              <h2 className="h2" id="num-title" data-reveal data-delay="1">
+                Quanto a IA melhora uma empresa, em números.
+              </h2>
+            </div>
+            <div className="stats-grid">
+              <div className="stat" data-reveal>
+                <span className="stat__num">78%</span>
+                <p className="stat__label">
+                  das empresas no mundo já usam IA em pelo menos uma área do
+                  negócio.
+                </p>
+                <span className="stat__src">McKinsey · The State of AI, 2025</span>
+              </div>
+              <div className="stat" data-reveal data-delay="1">
+                <span className="stat__num">+66%</span>
+                <p className="stat__label">
+                  de produtividade média em tarefas reais de trabalho ao usar
+                  IA generativa.
+                </p>
+                <span className="stat__src">Nielsen Norman Group, 2023</span>
+              </div>
+              <div className="stat" data-reveal data-delay="2">
+                <span className="stat__num">US$ 4,4 tri</span>
+                <p className="stat__label">
+                  é o potencial anual estimado que a IA generativa pode
+                  adicionar à economia global.
+                </p>
+                <span className="stat__src">McKinsey, 2023</span>
+              </div>
+            </div>
+            <p className="stats-note" data-reveal data-delay="2">
+              Esses ganhos aparecem quando a IA conhece o contexto do negócio,
+              e é exatamente essa ponte que a sessão monta para a sua empresa.
+            </p>
           </div>
         </section>
 
@@ -706,6 +750,87 @@ const LpAios: React.FC = () => {
           </div>
         </section>
 
+        {/* ============================ ENTREGA + PREÇO ============================ */}
+        <section className="section" id="oferta" aria-labelledby="offer-title">
+          <div className="wrap">
+            <div className="sec-head">
+              <span className="kicker" data-reveal>
+                a entrega
+              </span>
+              <h2 className="h2" id="offer-title" data-reveal data-delay="1">
+                O que você leva, preto no branco.
+              </h2>
+            </div>
+            <div className="offer-grid">
+              <ul className="offer-list" data-reveal>
+                <li>
+                  <span className="ck">
+                    <Check />
+                  </span>
+                  <span>
+                    <b>Sessão individual ao vivo de cerca de 1 hora</b>, mão na
+                    massa, comigo do seu lado do começo ao fim.
+                  </span>
+                </li>
+                <li>
+                  <span className="ck">
+                    <Check />
+                  </span>
+                  <span>
+                    <b>Pré-roteiro antes da sessão</b>, para começarmos no
+                    ponto certo sem desperdiçar o seu tempo.
+                  </span>
+                </li>
+                <li>
+                  <span className="ck">
+                    <Check />
+                  </span>
+                  <span>
+                    <b>Seu AI operating system montado e funcionando</b> no seu
+                    ambiente, com o contexto do seu negócio. Ele é seu e
+                    continua com você depois da sessão.
+                  </span>
+                </li>
+                <li>
+                  <span className="ck">
+                    <Check />
+                  </span>
+                  <span>
+                    <b>Resumo escrito com os próximos passos</b> para você
+                    aplicar já na semana seguinte.
+                  </span>
+                </li>
+              </ul>
+              <aside className="price-card" data-reveal data-delay="1">
+                <span className="price-card__tag">primeiros 10 clientes</span>
+                <div className="price-card__row">
+                  <span className="price-old">R$ 400</span>
+                  <span className="price-now">R$ 200</span>
+                  <span className="price-per">por sessão</span>
+                </div>
+                <p className="price-note">
+                  Metade do preço para quem entrar nesta primeira leva. O valor
+                  é baixo de propósito: neste momento eu quero criar novas
+                  conexões e casos reais, e cobrar pouco é o jeito mais direto
+                  de abrir essa porta.
+                </p>
+                <a
+                  className="btn btn--block"
+                  href={WHATSAPP_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>Garantir uma das 10 vagas</span>
+                  <span className="ar" aria-hidden="true">
+                    →
+                  </span>
+                </a>
+                <Mark className="grain" />
+              </aside>
+            </div>
+          </div>
+        </section>
+
         {/* ============================ POR QUE COMIGO ============================ */}
         <section className="why section" aria-labelledby="why-title">
           <div className="wrap why-grid">
@@ -824,6 +949,18 @@ const LpAios: React.FC = () => {
               </details>
               <details className="faq-item">
                 <summary className="faq-q">
+                  Quanto custa? <span className="pm" aria-hidden="true" />
+                </summary>
+                <div className="faq-a">
+                  <div className="faq-a-inner">
+                    O valor cheio da sessão é R$ 400. Os 10 primeiros clientes
+                    pagam R$ 200, metade do preço, porque nesta leva o meu
+                    objetivo é criar novas conexões e casos reais.
+                  </div>
+                </div>
+              </details>
+              <details className="faq-item">
+                <summary className="faq-q">
                   E se eu travar depois? <span className="pm" aria-hidden="true" />
                 </summary>
                 <div className="faq-a">
@@ -862,8 +999,9 @@ const LpAios: React.FC = () => {
               Vamos montar o seu sistema.
             </h2>
             <p data-reveal data-delay="2">
-              Nesta primeira leva as vagas são poucas e o valor é de introdução,
-              porque eu estou priorizando resultado e relação antes de escalar.
+              São 10 vagas nesta primeira leva, por R$ 200 a sessão, metade do
+              valor cheio. O preço é baixo de propósito: agora a minha
+              prioridade é criar conexões e gerar resultado para quem entrar.
             </p>
             <div className="final-actions" data-reveal data-delay="3">
               <a

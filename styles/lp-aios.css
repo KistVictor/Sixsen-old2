@@ -433,6 +433,52 @@ body.lp-aios-active { background: var(--paper); }
   .lp-aios .step h3 { margin-top: 9px; }
 }
 
+/* ---------- Stats (big numbers) ---------- */
+.lp-aios .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(24px, 3vw, 48px); margin-top: clamp(36px, 5vw, 56px); }
+.lp-aios .stat { border-top: 2px solid var(--accent-line); padding-top: 22px; }
+.lp-aios .stat__num { font-family: var(--display); font-size: clamp(38px, 4.6vw, 60px); line-height: 1; color: var(--accent); display: block; letter-spacing: -0.01em; }
+.lp-aios .stat__label { margin: 14px 0 0; color: var(--sx-neutro-500); font-size: 16px; line-height: 1.55; max-width: 30ch; }
+.lp-aios .stat__src { display: block; margin-top: 12px; font-size: 11.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--sx-neutro-400); }
+.lp-aios .stats-note {
+  margin: clamp(28px, 4vw, 44px) 0 0; padding: 18px 22px; max-width: 72ch;
+  border-left: 3px solid var(--accent); background: var(--accent-wash);
+  border-radius: 0 var(--sx-radius-md) var(--sx-radius-md) 0;
+  color: var(--sx-neutro-700); font-size: 16.5px; line-height: 1.6;
+}
+@media (max-width: 760px) { .lp-aios .stats-grid { grid-template-columns: 1fr; gap: 28px; } }
+
+/* ---------- Offer (entrega + preço) ---------- */
+.lp-aios .offer-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: clamp(28px, 4vw, 56px); margin-top: clamp(36px, 5vw, 56px); align-items: start; }
+.lp-aios .offer-list { list-style: none; margin: 0; padding: 0; }
+.lp-aios .offer-list li { display: grid; grid-template-columns: 30px 1fr; gap: 14px; padding: 18px 0; border-top: 1px solid var(--sx-border); font-size: 16.5px; line-height: 1.55; color: var(--sx-neutro-500); }
+.lp-aios .offer-list li:last-child { border-bottom: 1px solid var(--sx-border); }
+.lp-aios .offer-list b { color: var(--ink); font-weight: 700; }
+.lp-aios .offer-list .ck { width: 26px; height: 26px; border-radius: 50%; display: grid; place-content: center; background: var(--accent-wash); color: var(--accent); margin-top: 2px; }
+.lp-aios .offer-list .ck svg { width: 15px; height: 15px; }
+.lp-aios .price-card {
+  position: relative; overflow: hidden;
+  background: var(--ink); color: var(--sx-branco);
+  border-radius: var(--sx-radius-xl); padding: clamp(28px, 3vw, 40px);
+  box-shadow: var(--sx-shadow-lg);
+}
+.lp-aios .price-card__tag {
+  display: inline-block; font-size: 11.5px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber);
+  background: color-mix(in oklab, var(--amber) 18%, transparent);
+  padding: 6px 12px; border-radius: var(--sx-radius-full);
+}
+.lp-aios .price-card__row { display: flex; align-items: baseline; gap: 14px; margin-top: 22px; flex-wrap: wrap; }
+.lp-aios .price-old { font-size: 20px; color: color-mix(in oklab, var(--sx-branco) 55%, transparent); text-decoration: line-through; }
+.lp-aios .price-now { font-family: var(--display); font-size: clamp(44px, 4.6vw, 60px); line-height: 1; color: var(--sx-branco); }
+.lp-aios .price-per { font-size: 14px; color: color-mix(in oklab, var(--sx-branco) 70%, transparent); }
+.lp-aios .price-note { margin: 18px 0 26px; font-size: 15.5px; line-height: 1.6; color: color-mix(in oklab, var(--sx-branco) 78%, transparent); position: relative; z-index: 1; }
+.lp-aios .price-card .btn { position: relative; z-index: 1; }
+.lp-aios .price-card .grain { position: absolute; right: -44px; bottom: -56px; width: 230px; color: var(--accent); opacity: 0.12; pointer-events: none; }
+@media (max-width: 940px) {
+  .lp-aios .offer-grid { grid-template-columns: 1fr; }
+  .lp-aios .price-card { max-width: 520px; }
+}
+
 /* ---------- Why me ---------- */
 .lp-aios .why { background: var(--sx-neutro-50); border-top: 1px solid var(--sx-border); border-bottom: 1px solid var(--sx-border); }
 .lp-aios .why-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(32px, 5vw, 72px); align-items: center; }
