@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react';
-import '../../styles/auditoria-geo-narre.css';
+import '../../../styles/auditoria-geo-narre.css';
 
 /**
  * Deck de apresentação "Content GEO" (Sixsen × Narre).

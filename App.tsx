@@ -6,9 +6,9 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import AboutPortfolio from './pages/AboutPortfolio';
 import LpAios from './pages/LpAios';
-import AuditoriaGeoNarre from './pages/projects/AuditoriaGeoNarre';
-import RelatorioGeoPaola from './pages/projects/RelatorioGeoPaola';
-import ContentGeoNarre from './pages/projects/ContentGeoNarre';
+import AuditoriaGeoNarre from './pages/projects/narre/AuditoriaGeoNarre';
+import RelatorioGeoPaola from './pages/projects/narre/RelatorioGeoPaola';
+import ContentGeoNarre from './pages/projects/narre/ContentGeoNarre';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();

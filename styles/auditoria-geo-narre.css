@@ -198,7 +198,7 @@ body.agn-active {
   text-transform: uppercase;
   color: var(--white);
 }
-.agn-wordmark span { color: var(--orange); }
+.agn-wordmark span { color: inherit; }
 .agn-wordmark-sub {
   font-weight: 300;
   font-size: 8px;

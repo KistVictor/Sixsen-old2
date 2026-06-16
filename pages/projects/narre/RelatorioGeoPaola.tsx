@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import '../../styles/relatorio-geo-narre.css';
+import '../../../styles/relatorio-geo-narre.css';
 
 /**
  * Relatório de exemplo (entregável NARRE SCAN) para a Dra. Paola Falcochio,

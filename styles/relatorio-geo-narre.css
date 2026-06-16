@@ -52,7 +52,7 @@ body.agnr-active {
   border-bottom: 0.5px solid var(--border);
 }
 .agnr-bar .mk { font-weight: 600; font-size: 13px; letter-spacing: 0.34em; text-transform: uppercase; }
-.agnr-bar .mk span { color: var(--orange); }
+.agnr-bar .mk span { color: inherit; }
 .agnr-bar .doc { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--dim); }
 
 /* ---------- aviso de amostra ---------- */
