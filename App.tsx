@@ -6,6 +6,8 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import AboutPortfolio from './pages/AboutPortfolio';
 import LpAios from './pages/LpAios';
+import AuditoriaGeoNarre from './pages/projects/AuditoriaGeoNarre';
+import RelatorioGeoPaola from './pages/projects/RelatorioGeoPaola';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -39,6 +41,10 @@ const App: React.FC = () => {
         </Route>
         {/* Standalone light-theme landing page with its own header/footer chrome. */}
         <Route path="/lp-aios" element={<LpAios />} />
+        {/* Standalone Narre-branded pitch deck (own chrome, no site shell). */}
+        <Route path="/projects/auditoria-geo-narre" element={<AuditoriaGeoNarre />} />
+        {/* Sample NARRE SCAN report rendered from a real briefing + real recon. */}
+        <Route path="/projects/relatorio-geo-paola" element={<RelatorioGeoPaola />} />
       </Routes>
     </BrowserRouter>
   );
