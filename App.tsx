@@ -8,6 +8,7 @@ import AboutPortfolio from './pages/AboutPortfolio';
 import LpAios from './pages/LpAios';
 import AuditoriaGeoNarre from './pages/projects/AuditoriaGeoNarre';
 import RelatorioGeoPaola from './pages/projects/RelatorioGeoPaola';
+import ContentGeoNarre from './pages/projects/ContentGeoNarre';
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -45,6 +46,8 @@ const App: React.FC = () => {
         <Route path="/projects/auditoria-geo-narre" element={<AuditoriaGeoNarre />} />
         {/* Sample NARRE SCAN report rendered from a real briefing + real recon. */}
         <Route path="/projects/relatorio-geo-paola" element={<RelatorioGeoPaola />} />
+        {/* Standalone Narre-branded pitch deck for the Content GEO blog-post engine. */}
+        <Route path="/projects/content-geo-narre" element={<ContentGeoNarre />} />
       </Routes>
     </BrowserRouter>
   );
