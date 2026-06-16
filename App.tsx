@@ -43,11 +43,11 @@ const App: React.FC = () => {
         {/* Standalone light-theme landing page with its own header/footer chrome. */}
         <Route path="/lp-aios" element={<LpAios />} />
         {/* Standalone Narre-branded pitch deck (own chrome, no site shell). */}
-        <Route path="/projects/auditoria-geo-narre" element={<AuditoriaGeoNarre />} />
+        <Route path="/projects/narre/auditoria-geo" element={<AuditoriaGeoNarre />} />
         {/* Sample NARRE SCAN report rendered from a real briefing + real recon. */}
-        <Route path="/projects/relatorio-geo-paola" element={<RelatorioGeoPaola />} />
+        <Route path="/projects/narre/relatorio-geo-paola" element={<RelatorioGeoPaola />} />
         {/* Standalone Narre-branded pitch deck for the Content GEO blog-post engine. */}
-        <Route path="/projects/content-geo-narre" element={<ContentGeoNarre />} />
+        <Route path="/projects/narre/content-geo" element={<ContentGeoNarre />} />
       </Routes>
     </BrowserRouter>
   );

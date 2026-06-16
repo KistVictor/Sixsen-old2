@@ -378,46 +378,10 @@ const SlideSaida = () => (
   </div>
 );
 
-const SlideComercial = () => (
-  <div className="agn-inner agn-stacklg agn-stagger">
-    <div className="agn-eyebrow">09 · Lógica comercial</div>
-    <h2 className="agn-h2">
-      O SCAN abre a <span className="agn-accent">esteira</span>
-    </h2>
-    <p className="agn-lead">
-      O relatório não é um fim. A seção final dele funila para o próximo produto da Narre.
-    </p>
-    <div className="agn-funnel" style={{ marginTop: '1rem', alignItems: 'stretch' }}>
-      <div className="agn-prod active">
-        <span className="pl">Nível 01 · Entrada</span>
-        <span className="pn">Narre Scan</span>
-        <span className="ph">Este relatório. O diagnóstico que abre a conversa.</span>
-        <span className="pp">R$ 3K</span>
-      </div>
-      <div className="agn-prod dim">
-        <span className="pl">Nível 02 · High-ticket</span>
-        <span className="pn">Narre Build</span>
-        <span className="ph">Implementação: schema, Wikidata, hub, PR em portais.</span>
-        <span className="pp">R$ 30K</span>
-      </div>
-      <div className="agn-prod dim">
-        <span className="pl">Nível 03 · Recorrência</span>
-        <span className="pn">Narre Shield</span>
-        <span className="ph">Governança contínua e relatório de Share of Model.</span>
-        <span className="pp">R$ 6K<span style={{ fontSize: 13, fontWeight: 300 }}>/mês</span></span>
-      </div>
-    </div>
-    <p className="agn-lead" style={{ fontSize: 12.5, color: 'var(--muted)' }}>
-      Preços do brand kit da Narre ao cliente final. O agente alimenta os três níveis com o
-      mesmo diagnóstico.
-    </p>
-  </div>
-);
-
 const SlideFechamento = () => (
   <div className="agn-inner agn-split">
     <div className="agn-stacklg agn-stagger">
-      <div className="agn-eyebrow">10 · Prazo e próximos passos</div>
+      <div className="agn-eyebrow">09 · Prazo e próximos passos</div>
       <h2 className="agn-h2">O que vem agora</h2>
       <Rule />
       <div className="agn-list" style={{ marginTop: '0.4rem' }}>
@@ -447,17 +411,13 @@ const SlideFechamento = () => (
           Investimento
         </span>
         <span className="agn-bignum on" style={{ fontSize: 'clamp(2.4rem,5vw,4rem)' }}>
-          a definir
+          R$ 9.840
         </span>
         <span className="cd">
-          Fechado após o entendimento do escopo com a Narre. Modelo: setup de construção +
-          eventual licença de operação.
+          Setup de construção do sistema agêntico, com a Narre operando o entregável.
         </span>
       </div>
       <div className="agn-cover-foot" style={{ marginTop: '0.4rem' }}>
-        <span>
-          Próxima reunião: <b>quarta-feira</b>
-        </span>
         <span>
           <b>Sixsen × Narre</b>
         </span>
@@ -476,7 +436,6 @@ const slides: Array<{ id: string; node: React.ReactNode; cover?: boolean }> = [
   { id: 'pipeline', node: <SlidePipeline /> },
   { id: 'som', node: <SlideSom /> },
   { id: 'saida', node: <SlideSaida /> },
-  { id: 'comercial', node: <SlideComercial /> },
   { id: 'fechamento', node: <SlideFechamento /> },
 ];
 

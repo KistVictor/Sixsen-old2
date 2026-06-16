@@ -49,8 +49,8 @@ const SlideCover = () => (
       <span className="tick">●</span> Proposta Sixsen × Narre · Content GEO
     </div>
     <div className="agn-slogan">
-      O blog da Narre é a prova viva do método.
-      <b>Agora um motor o escreve, aplicando o próprio método.</b>
+      O blog é onde o método da Narre tem que aparecer primeiro.
+      <b>Um motor que faz cada post nascer já na régua do GEO.</b>
     </div>
     <div className="agn-lead">
       Um grupo de agentes que transforma um tema em um{' '}
@@ -76,30 +76,30 @@ const SlideContexto = () => (
   <div className="agn-inner agn-split">
     <div className="agn-stacklg agn-stagger">
       <div className="agn-eyebrow">01 · O ponto de partida</div>
-      <h2 className="agn-h2">Conteúdo GEO de verdade dá trabalho</h2>
+      <h2 className="agn-h2">De boas táticas para um motor repetível</h2>
       <Rule />
     </div>
     <div className="agn-stacklg agn-stagger">
       <p className="agn-lead">
-        O blog da Narre já tem posts de alto nível. Cada um deles exige pesquisa, estrutura
-        certa e densidade citável. Escrever assim, post após post, é o gargalo de qualquer
-        operação de conteúdo séria.
+        O blog já é bem construído: cluster temático, FAQ com schema, tabelas comparativas,
+        linguagem de entidade. O método está lá. O ponto é transformar isso num{' '}
+        <span className="agn-white">motor repetível</span> que pesquisa mais fundo e garante a
+        mesma régua em todo post, sem depender de quem escreve no dia.
       </p>
       <div className="agn-list">
         <div className="li">
           <span className="mk" />
-          <p>Um post raso de 300 palavras não treina modelo nenhum. O bom custa horas.</p>
+          <p>Os posts já usam boas táticas. O teto sobe com pesquisa mais profunda e dado mais fresco.</p>
         </div>
         <div className="li">
           <span className="mk" />
           <p>
-            Sem auditar o que já existe, o blog repete tema e perde a força de{' '}
-            <b>cluster</b>.
+            Sem auditar o <b>cluster</b> a cada post, é fácil repetir tema e diluir a linkagem.
           </p>
         </div>
         <div className="li">
           <span className="mk" />
-          <p>Ferramenta genérica de IA produz texto plausível, não conteúdo citável por IA.</p>
+          <p>Densidade citável pede um portão fixo, seção por seção, pra não variar de post pra post.</p>
         </div>
       </div>
     </div>
@@ -146,46 +146,6 @@ const SlideProposta = () => (
   </div>
 );
 
-const SlideOnde = () => (
-  <div className="agn-inner agn-split">
-    <div className="agn-stacklg agn-stagger">
-      <div className="agn-eyebrow">03 · Decisão técnica</div>
-      <h2 className="agn-h2">Por que dentro do Claude</h2>
-      <Rule />
-      <p className="agn-lead">
-        O post exige <span className="agn-white">pesquisa web real</span> e várias passagens de
-        revisão. Isso roda com qualidade dentro do Claude Desktop ou do Claude Code.
-      </p>
-    </div>
-    <div className="agn-grid cols-1 agn-stagger" style={{ gap: 3 }}>
-      <div className="agn-card">
-        <span className="cn">01</span>
-        <span className="ct">Pesquisa real, não chute</span>
-        <span className="cd">
-          O agente busca dados e fontes atuais na web durante a própria conversa. O post fica
-          factual e defensável.
-        </span>
-      </div>
-      <div className="agn-card">
-        <span className="cn">02</span>
-        <span className="ct">Custo de token coberto</span>
-        <span className="cd">
-          Rodando no Claude Desktop, o consumo entra no plano Pro/Max. Sem custo de API por
-          post.
-        </span>
-      </div>
-      <div className="agn-card lead-orange">
-        <span className="cn">03</span>
-        <span className="ct">Mesma operação do Scan</span>
-        <span className="cd">
-          O mesmo ambiente do primeiro projeto. Quem opera a Auditoria GEO opera isto, sem
-          ferramenta nova.
-        </span>
-      </div>
-    </div>
-  </div>
-);
-
 const moldeItens = [
   ['01', 'Frontmatter completo', 'title, description, tags, relatedPosts, FAQ'],
   ['02', 'Abertura com cena', 'Põe o leitor numa situação concreta'],
@@ -198,7 +158,7 @@ const moldeItens = [
 const SlideMolde = () => (
   <div className="agn-inner agn-split">
     <div className="agn-stacklg agn-stagger">
-      <div className="agn-eyebrow">04 · A régua de saída</div>
+      <div className="agn-eyebrow">03 · A régua de saída</div>
       <h2 className="agn-h2">O molde do blog, capturado</h2>
       <Rule />
       <p className="agn-lead">
@@ -228,9 +188,9 @@ const SlideMolde = () => (
 const pipeline: Array<{ n: string; t: string; d: string; tag: string; human?: boolean }> = [
   { n: '00', t: 'Intake', d: 'Trava tema, query-alvo, leitor e ângulo.', tag: 'Operador', human: true },
   { n: '01', t: 'Pesquisa', d: 'Busca web real: dados, fontes, gaps.', tag: 'Auto' },
-  { n: '02', t: 'Auditoria do blog', d: 'Onde encaixa, o que linkar, dedup.', tag: 'Auto' },
-  { n: '03', t: 'Brief + Outline', d: 'Keyword, H1, esqueleto, FAQ, ângulo.', tag: 'Operador', human: true },
-  { n: '04', t: 'Redação', d: 'Escreve no molde, com frontmatter.', tag: 'Auto' },
+  { n: '02', t: 'Auditoria do blog', d: 'Onde encaixa, o que linkar, deduplicação.', tag: 'Auto' },
+  { n: '03', t: 'Brief + Outline', d: 'O plano do post: ângulo, títulos, seções e FAQ.', tag: 'Operador', human: true },
+  { n: '04', t: 'Redação', d: 'Escreve o post no molde, com título, resumo e tags.', tag: 'Auto' },
   { n: '05', t: 'SEO/GEO check', d: 'Meta, schema, links, densidade citável.', tag: 'Auto' },
   { n: '06', t: 'Edição + voz', d: 'Precisão, voz da marca, legibilidade.', tag: 'Auto' },
   { n: '07', t: 'Quality Gate', d: 'Portão GEO por seção. GO ou revisar.', tag: 'Operador', human: true },
@@ -238,7 +198,7 @@ const pipeline: Array<{ n: string; t: string; d: string; tag: string; human?: bo
 
 const SlidePipeline = () => (
   <div className="agn-inner agn-stacklg agn-stagger">
-    <div className="agn-eyebrow">05 · O motor</div>
+    <div className="agn-eyebrow">04 · O motor</div>
     <h2 className="agn-h2">
       Pipeline de <span className="agn-accent">8 etapas</span>
     </h2>
@@ -260,60 +220,9 @@ const SlidePipeline = () => (
   </div>
 );
 
-const SlideGate = () => (
-  <div className="agn-inner agn-split">
-    <div className="agn-stacklg agn-stagger">
-      <div className="agn-eyebrow">06 · O coração defensável</div>
-      <h2 className="agn-h2">Citável por IA, seção por seção</h2>
-      <Rule />
-      <p className="agn-lead">
-        O que separa "texto plausível" de "fonte citada pelas IAs" é a densidade citável. O
-        Quality Gate testa cada H2 antes de liberar o post.
-      </p>
-    </div>
-    <div className="agn-stacklg agn-stagger">
-      <div className="agn-list">
-        <div className="li">
-          <span className="mk" />
-          <p>
-            <b>Resposta direta:</b> a seção abre respondendo a pergunta.
-          </p>
-        </div>
-        <div className="li">
-          <span className="mk" />
-          <p>
-            <b>Um conceito só:</b> nada de seção que trata de três coisas.
-          </p>
-        </div>
-        <div className="li">
-          <span className="mk" />
-          <p>
-            <b>Pronome resolvido:</b> faz sentido extraído fora de contexto.
-          </p>
-        </div>
-        <div className="li">
-          <span className="mk" />
-          <p>
-            <b>Dado com fonte:</b> toda afirmação factual ancorada.
-          </p>
-        </div>
-        <div className="li">
-          <span className="mk" />
-          <p>
-            <b>Abertura autossuficiente:</b> a primeira frase se sustenta sozinha.
-          </p>
-        </div>
-      </div>
-      <p className="agn-lead" style={{ fontSize: 12.5, color: 'var(--muted)' }}>
-        Qualquer falha devolve para a redação com instrução específica. Nada passa por inércia.
-      </p>
-    </div>
-  </div>
-);
-
 const SlideCluster = () => (
   <div className="agn-inner agn-stacklg agn-stagger">
-    <div className="agn-eyebrow">07 · A auditoria do blog</div>
+    <div className="agn-eyebrow">05 · A auditoria do blog</div>
     <h2 className="agn-h2">
       Todo post entra no <span className="agn-accent">cluster</span>
     </h2>
@@ -340,8 +249,8 @@ const SlideCluster = () => (
       ))}
     </div>
     <p className="agn-lead" style={{ fontSize: 12.5, color: 'var(--muted)' }}>
-      Linkagem interna descritiva e dedup: o que faz seis artigos interligados parecerem mais
-      especializados que cinquenta soltos.
+      Linkagem interna descritiva e deduplicação: o que faz seis artigos interligados
+      parecerem mais especializados que cinquenta soltos.
     </p>
   </div>
 );
@@ -349,7 +258,7 @@ const SlideCluster = () => (
 const SlideSaida = () => (
   <div className="agn-inner agn-split">
     <div className="agn-stacklg agn-stagger">
-      <div className="agn-eyebrow">08 · O entregável</div>
+      <div className="agn-eyebrow">06 · O entregável</div>
       <h2 className="agn-h2">Pronto para subir</h2>
       <Rule />
       <p className="agn-lead">
@@ -379,7 +288,7 @@ const SlideSaida = () => (
 
 const SlideComercial = () => (
   <div className="agn-inner agn-stacklg agn-stagger">
-    <div className="agn-eyebrow">09 · Lógica comercial</div>
+    <div className="agn-eyebrow">07 · Lógica comercial</div>
     <h2 className="agn-h2">
       O motor por trás do <span className="agn-accent">blog estratégico</span>
     </h2>
@@ -391,25 +300,25 @@ const SlideComercial = () => (
       <div className="agn-prod active">
         <span className="pl">Aplicação 01</span>
         <span className="pn">Blog da Narre</span>
-        <span className="ph">A prova viva do método, alimentada com cadência.</span>
-        <span className="pp">Interno</span>
+        <span className="ph">A entrega de agora, pra usar internamente, alimentada com cadência.</span>
+        <span className="pp">Agora</span>
       </div>
       <div className="agn-prod dim">
         <span className="pl">Aplicação 02</span>
-        <span className="pn">Conteúdo dos planos</span>
-        <span className="ph">O blog estratégico entregue a cada cliente, na régua.</span>
-        <span className="pp">Escala</span>
+        <span className="pn">Posts do cliente</span>
+        <span className="ph">O mesmo motor, adaptado ao nicho e à voz de cada cliente.</span>
+        <span className="pp">Próximo</span>
       </div>
       <div className="agn-prod dim">
         <span className="pl">Aplicação 03</span>
-        <span className="pn">Esteira de conteúdo</span>
-        <span className="ph">Base para hub e satélites de cada cliente.</span>
-        <span className="pp">Próximo</span>
+        <span className="pn">Outras redes</span>
+        <span className="ph">O conteúdo do blog adaptado para os demais canais, na mesma narrativa.</span>
+        <span className="pp">Depois</span>
       </div>
     </div>
     <p className="agn-lead" style={{ fontSize: 12.5, color: 'var(--muted)' }}>
-      O mesmo pipeline, trocando o briefing de entrada e a marca de saída, serve cliente após
-      cliente.
+      O mesmo pipeline, trocando a entrada e a marca de saída, evolui da vitrine interna para o
+      conteúdo de cada cliente.
     </p>
   </div>
 );
@@ -417,7 +326,7 @@ const SlideComercial = () => (
 const SlideFechamento = () => (
   <div className="agn-inner agn-split">
     <div className="agn-stacklg agn-stagger">
-      <div className="agn-eyebrow">10 · Prazo e próximos passos</div>
+      <div className="agn-eyebrow">08 · Prazo e próximos passos</div>
       <h2 className="agn-h2">O que vem agora</h2>
       <Rule />
       <div className="agn-list" style={{ marginTop: '0.4rem' }}>
@@ -447,17 +356,13 @@ const SlideFechamento = () => (
           Investimento
         </span>
         <span className="agn-bignum on" style={{ fontSize: 'clamp(2.4rem,5vw,4rem)' }}>
-          a definir
+          R$ 5.760
         </span>
         <span className="cd">
-          Fechado após o entendimento do escopo com a Narre. Modelo: setup de construção +
-          eventual licença de operação.
+          Setup de construção do sistema agêntico, com a Narre operando o entregável.
         </span>
       </div>
       <div className="agn-cover-foot" style={{ marginTop: '0.4rem' }}>
-        <span>
-          Próxima reunião: <b>quarta-feira</b>
-        </span>
         <span>
           <b>Sixsen × Narre</b>
         </span>
@@ -470,10 +375,8 @@ const slides: Array<{ id: string; node: React.ReactNode; cover?: boolean }> = [
   { id: 'cover', node: <SlideCover />, cover: true },
   { id: 'contexto', node: <SlideContexto /> },
   { id: 'proposta', node: <SlideProposta /> },
-  { id: 'onde', node: <SlideOnde /> },
   { id: 'molde', node: <SlideMolde /> },
   { id: 'pipeline', node: <SlidePipeline /> },
-  { id: 'gate', node: <SlideGate /> },
   { id: 'cluster', node: <SlideCluster /> },
   { id: 'saida', node: <SlideSaida /> },
   { id: 'comercial', node: <SlideComercial /> },

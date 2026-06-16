@@ -416,7 +416,7 @@ body.agn-active {
   font-weight: 600; font-size: 13px; letter-spacing: 0.34em;
   text-transform: uppercase; color: var(--white);
 }
-.agn-topbar .mk span { color: var(--orange); }
+.agn-topbar .mk span { color: inherit; }
 .agn-topbar .by { font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--dim); }
 
 .agn-progress {
