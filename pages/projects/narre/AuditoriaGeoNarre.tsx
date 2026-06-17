@@ -297,53 +297,6 @@ const SlidePipeline = () => (
   </div>
 );
 
-const SlideSom = () => (
-  <div className="agn-inner agn-split">
-    <div className="agn-stacklg agn-stagger">
-      <div className="agn-eyebrow">07 · O coração defensável</div>
-      <h2 className="agn-h2">Share of Model, medido de verdade</h2>
-      <Rule />
-      <p className="agn-lead">
-        O próprio método publicado da Narre já manda abrir cada IA e registrar o resultado com
-        print. O sistema gera o protocolo; o operador executa; o Claude pontua.
-      </p>
-    </div>
-    <div className="agn-stacklg agn-stagger">
-      <div className="agn-grid cols-2">
-        {[
-          ['ChatGPT', 'Base + Search'],
-          ['Gemini', 'Híbrido Google'],
-          ['Perplexity', 'RAG, citação rápida'],
-          ['Claude', 'Precisão e cautela'],
-        ].map(([p, d]) => (
-          <div className="agn-card" key={p} style={{ padding: '1.1rem 1.2rem', gap: '0.3rem' }}>
-            <span className="ct" style={{ fontSize: 14 }}>
-              {p}
-            </span>
-            <span className="cd" style={{ fontSize: 11.5 }}>
-              {d}
-            </span>
-          </div>
-        ))}
-      </div>
-      <div className="agn-list">
-        <div className="li">
-          <span className="mk" />
-          <p>
-            <b>Auditável:</b> cada nota de SoM tem um print por trás.
-          </p>
-        </div>
-        <div className="li">
-          <span className="mk" />
-          <p>
-            <b>Zero infra:</b> roda no Claude Desktop, sem automação que quebra.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-);
-
 const relatorioSecoes = [
   ['01', 'Resumo executivo'],
   ['02', 'Perfil do cliente'],
@@ -359,7 +312,7 @@ const relatorioSecoes = [
 
 const SlideSaida = () => (
   <div className="agn-inner agn-stacklg agn-stagger">
-    <div className="agn-eyebrow">08 · O entregável</div>
+    <div className="agn-eyebrow">07 · O entregável</div>
     <h2 className="agn-h2">
       O relatório <span className="agn-accent">NARRE SCAN</span>
     </h2>
@@ -381,7 +334,7 @@ const SlideSaida = () => (
 const SlideFechamento = () => (
   <div className="agn-inner agn-split">
     <div className="agn-stacklg agn-stagger">
-      <div className="agn-eyebrow">09 · Prazo e próximos passos</div>
+      <div className="agn-eyebrow">08 · Prazo e próximos passos</div>
       <h2 className="agn-h2">O que vem agora</h2>
       <Rule />
       <div className="agn-list" style={{ marginTop: '0.4rem' }}>
@@ -434,7 +387,6 @@ const slides: Array<{ id: string; node: React.ReactNode; cover?: boolean }> = [
   { id: 'saltos', node: <SlideSaltos /> },
   { id: 'briefing', node: <SlideBriefing /> },
   { id: 'pipeline', node: <SlidePipeline /> },
-  { id: 'som', node: <SlideSom /> },
   { id: 'saida', node: <SlideSaida /> },
   { id: 'fechamento', node: <SlideFechamento /> },
 ];
