@@ -181,6 +181,38 @@ body.agn-active {
 }
 .agn-bignum.on { color: var(--orange); font-weight: 600; }
 
+/* Parcelamento — slide de investimento */
+.agn-parcela {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 0.1rem;
+}
+.agn-parcela-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.55rem;
+}
+.agn-parcela-head .px {
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  color: var(--orange);
+}
+.agn-parcela-head .pv {
+  font-weight: 500;
+  font-size: 22px;
+  letter-spacing: -0.01em;
+  color: var(--white);
+}
+.agn-parcela-head .pj {
+  margin-left: auto;
+  font-size: 8.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
 /* ============================================================
    Capa
    ============================================================ */
@@ -318,6 +350,42 @@ body.agn-active {
 .agn-step.human { border-color: var(--orange2); }
 .agn-step.human .stag { color: var(--orange); }
 .agn-step.human .sn { color: var(--orange); font-weight: 600; }
+
+/* Agentes de redes — trilha separada do pipeline do blog */
+.agn-redes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-top: 0.4rem;
+}
+.agn-redes-head {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.agn-redes-head::after {
+  content: '';
+  flex: 1;
+  height: 0.5px;
+  background: var(--border2);
+}
+.agn-step.net {
+  flex: 0 1 300px;
+  border-style: dashed;
+  border-color: var(--border2);
+}
+.agn-step.net .sn {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.agn-step.net .stag { color: var(--muted); }
 
 /* esteira de produtos (funil comercial) */
 .agn-funnel { display: flex; gap: 3px; flex-wrap: wrap; }

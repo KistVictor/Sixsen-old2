@@ -113,9 +113,9 @@ const SlideProposta = () => (
       Uma redação inteira, executada por <span className="agn-accent">agentes</span>
     </h2>
     <p className="agn-lead">
-      Não é um botão de gerar texto. É a divisão de trabalho de uma redação real (pesquisador,
-      estrategista, redator, SEO, editor, QA) codificada na metodologia da própria Narre. O
-      operador entra só nos dois momentos certos.
+      Não é um botão de gerar texto. É a divisão de trabalho de uma redação real (pesquisa,
+      estratégia, redação, revisão), mais agentes próprios de LinkedIn e Instagram, codificada
+      na metodologia da própria Narre. O operador entra só nos dois momentos certos.
     </p>
     <div className="agn-flow" style={{ marginTop: '1.4rem' }}>
       <div className="agn-step">
@@ -130,7 +130,7 @@ const SlideProposta = () => (
       <div className="agn-step human">
         <span className="sn">◆</span>
         <span className="st">Grupo de agentes</span>
-        <span className="sd">Pipeline de 8 etapas em Claude.</span>
+        <span className="sd">Pipeline de 6 etapas + agentes de redes.</span>
         <span className="stag">Processo</span>
       </div>
       <div className="agn-step" style={{ flex: '0 0 auto', justifyContent: 'center', minWidth: 64 }}>
@@ -185,25 +185,28 @@ const SlideMolde = () => (
   </div>
 );
 
-const pipeline: Array<{ n: string; t: string; d: string; tag: string; human?: boolean }> = [
-  { n: '00', t: 'Intake', d: 'Trava tema, query-alvo, leitor e ângulo.', tag: 'Operador', human: true },
-  { n: '01', t: 'Pesquisa', d: 'Busca web real: dados, fontes, gaps.', tag: 'Auto' },
-  { n: '02', t: 'Auditoria do blog', d: 'Onde encaixa, o que linkar, deduplicação.', tag: 'Auto' },
-  { n: '03', t: 'Brief + Outline', d: 'O plano do post: ângulo, títulos, seções e FAQ.', tag: 'Operador', human: true },
+const blogPipeline: Array<{ n: string; t: string; d: string; tag: string; human?: boolean }> = [
+  { n: '00', t: 'Pesquisa', d: 'Inicia a conversa ou roda agendada. Busca web real: dados, fontes, gaps.', tag: 'Início · Schedule' },
+  { n: '01', t: 'Auditoria do blog', d: 'Onde encaixa, o que linkar, deduplicação.', tag: 'Auto' },
+  { n: '02', t: 'Brief + Outline', d: 'O plano do post: ângulo, títulos, seções e FAQ.', tag: 'Operador', human: true },
+  { n: '03', t: 'Linguagem do blog', d: 'Aprende o tom dos posts já publicados para escrever igual.', tag: 'Auto' },
   { n: '04', t: 'Redação', d: 'Escreve o post no molde, com título, resumo e tags.', tag: 'Auto' },
-  { n: '05', t: 'SEO/GEO check', d: 'Meta, schema, links, densidade citável.', tag: 'Auto' },
-  { n: '06', t: 'Edição + voz', d: 'Precisão, voz da marca, legibilidade.', tag: 'Auto' },
-  { n: '07', t: 'Quality Gate', d: 'Portão GEO por seção. GO ou revisar.', tag: 'Operador', human: true },
+  { n: '05', t: 'Revisão', d: 'Revisão final por seção antes de publicar.', tag: 'Operador', human: true },
+];
+
+const redesAgents: Array<{ m: string; t: string; d: string; tag: string }> = [
+  { m: 'in', t: 'Post LinkedIn', d: 'Agente próprio. Escreve com base na linguagem de outros posts de LinkedIn já feitos.', tag: 'Independente' },
+  { m: 'IG', t: 'Post Instagram', d: 'Agente próprio. Carrossel e legenda na linguagem de outros posts de Instagram já feitos.', tag: 'Independente' },
 ];
 
 const SlidePipeline = () => (
   <div className="agn-inner agn-stacklg agn-stagger">
     <div className="agn-eyebrow">04 · O motor</div>
     <h2 className="agn-h2">
-      Pipeline de <span className="agn-accent">8 etapas</span>
+      Pipeline de <span className="agn-accent">6 etapas</span>
     </h2>
-    <div className="agn-flow" style={{ marginTop: '1.1rem' }}>
-      {pipeline.map((s) => (
+    <div className="agn-flow" style={{ marginTop: '0.9rem' }}>
+      {blogPipeline.map((s) => (
         <div className={`agn-step${s.human ? ' human' : ''}`} key={s.n}>
           <span className="sn">{s.n}</span>
           <span className="st">{s.t}</span>
@@ -212,11 +215,29 @@ const SlidePipeline = () => (
         </div>
       ))}
     </div>
-    <p className="agn-lead" style={{ fontSize: 13, marginTop: '0.4rem' }}>
-      Dois <span className="agn-accent">checkpoints humanos</span> (em laranja): validar o brief
-      antes de escrever e aprovar o post antes de publicar. O resto roda em sequência, cada
-      agente entregando um artefato para o próximo.
+    <p className="agn-lead" style={{ fontSize: 12.5, marginTop: '0.1rem' }}>
+      A pesquisa abre o trabalho — manual ou agendada. Antes de escrever, o agente aprende a{' '}
+      <span className="agn-white">linguagem dos posts já publicados</span> (etapa 03). Dois{' '}
+      <span className="agn-accent">checkpoints humanos</span> (em laranja): validar o brief e
+      revisar o post antes de publicar.
     </p>
+    <div className="agn-redes">
+      <div className="agn-redes-head">Agentes de redes · separados do pipeline do blog</div>
+      <div className="agn-flow">
+        {redesAgents.map((s) => (
+          <div className="agn-step net" key={s.m}>
+            <span className="sn">{s.m}</span>
+            <span className="st">{s.t}</span>
+            <span className="sd">{s.d}</span>
+            <span className="stag">{s.tag}</span>
+          </div>
+        ))}
+      </div>
+      <p className="agn-lead" style={{ fontSize: 12, color: 'var(--muted)', marginTop: '0.1rem' }}>
+        Não partem do post do blog: cada um escreve com base na linguagem de outros posts já
+        publicados na própria rede.
+      </p>
+    </div>
   </div>
 );
 
@@ -356,8 +377,15 @@ const SlideFechamento = () => (
           Investimento
         </span>
         <span className="agn-bignum on" style={{ fontSize: 'clamp(2.4rem,5vw,4rem)' }}>
-          R$ 5.760
+          R$ 6.480
         </span>
+        <div className="agn-parcela">
+          <div className="agn-parcela-head">
+            <span className="px">4×</span>
+            <span className="pv">R$ 1.620</span>
+            <span className="pj">sem juros</span>
+          </div>
+        </div>
         <span className="cd">
           Setup de construção do sistema agêntico, com a Narre operando o entregável.
         </span>
